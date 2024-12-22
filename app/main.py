@@ -1,11 +1,15 @@
 from fastapi import FastAPI
-import os
-from typing import Optional
+from pydantic import BaseModel
+from typing import Union
 
 
 app = FastAPI()
 
 
+@app.get("/test")
+def test():
+    return "TEST"
+
 @app.get("/")
 def home():
-    return "Hello World "
+    return "Hello World"
