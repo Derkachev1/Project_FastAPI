@@ -1,3 +1,6 @@
 fastapi[all]
 requests
 unicorn[standard]
+sqlalchemy[asyncio]
+asyncpg
+docker

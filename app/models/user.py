@@ -1,5 +1,5 @@
 from sqlalchemy import Column, Integer, String
-from app.database import Base, engine
+#from database import Base, engine
 
 class Person(Base):
     __tablename__ = "users"
@@ -12,4 +12,3 @@ class Person(Base):
     login = Column(String, unique=True, index=True)
     Email = Column(String, unique=True, index=True)
 
-Base.metadata.create_all(bind=engine)
