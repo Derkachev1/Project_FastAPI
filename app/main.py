@@ -6,7 +6,6 @@ from app.routers import router as api_router
 
 app = FastAPI()
 
-# Включаем роутер с префиксом
 app.include_router(api_router, prefix=settings.api.prefix)
 
 @app.get("/test")
