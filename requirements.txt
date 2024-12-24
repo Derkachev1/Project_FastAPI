@@ -4,3 +4,5 @@ unicorn[standard]
 sqlalchemy[asyncio]
 asyncpg
 docker
+pydantic
+uvicorn
