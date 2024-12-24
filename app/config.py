@@ -1,11 +1,13 @@
-from pydantic import BaseModel
 from pydantic_settings import BaseSettings
+import os
 
-class RunConfig(BaseModel):
+OPENWEATHER_API_KEY = os.getenv("OPENWEATHER_API_KEY", "your_openweathermap_api_key")
+
+class RunConfig(BaseSettings):
     host: str = "0.0.0.0"
     port: int = 8000
 
-class ApiPrefix(BaseModel):
+class ApiPrefix(BaseSettings):
     prefix: str = "/api"
 
 class Settings(BaseSettings):
