@@ -1,0 +1,47 @@
+<!-- app/templates/index.html -->
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Погода в городе {{ weather.city }}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        .weather-info {
+            font-size: 18px;
+            line-height: 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Погода в городе {{ weather.city }}</h1>
+        
+        <div class="weather-info">
+            <p>Температура: {{ weather.temperature }}°C</p>
+            <p>Описание: {{ weather.description }}</p>
+            <p>Влажность: {{ weather.humidity }}%</p>
+            <p>Давление: {{ weather.pressure }} гПа</p>
+            <p>Скорость ветра: {{ weather.wind_speed }} м/с</p>
+        </div>
+    </div>
+</body>
+</html>
